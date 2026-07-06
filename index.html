@@ -6,122 +6,196 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
-    background-color: #fcfcfc;
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+    color: #333d47;
+    -webkit-font-smoothing: antialiased;
 }
 
 header {
     display: flex;
     align-items: center;
-    background-color: #f4f6f8;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     color: #2c3e50;
-    padding: 25px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-left: 5px solid #34495e;
+    padding: 35px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-left: 6px solid #4a6572;
 }
 
 .avatar-container {
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .avatar-container img {
-    height: 240px;
-    border-radius: 4px;
-    border: 2px solid #ddd;
+    height: 250px;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    object-fit: cover;
 }
 
 .intro {
     flex: 1;
 }
 
-h1 { margin-bottom: 8px; color: #2c3e50; }
+h1 { 
+    font-size: 1.8rem;
+    margin: 0 0 10px 0; 
+    padding: 8px 16px;
+    color: #233342; 
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+}
 
 .info {
     text-align: justify;
-    line-height: 1.6;
-    color: #555;
+    line-height: 1.65;
+    color: #546e7a;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.quote-container {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #78909c;
+    font-size: 1.05rem;
+    font-weight: 300;
 }
 
 .tabs {
     display: flex;
-    border-bottom: 2px solid #ddd;
-    margin-top: 10px;
+    border-bottom: 2px solid #e2e8f0;
+    margin-top: 15px;
+    gap: 4px;
 }
 
 .tab-button {
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
-    background: #eaeded;
+    background: #eceff1;
     cursor: pointer;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    margin-right: 5px;
-    font-weight: bold;
-    color: #666;
+    font-weight: 450;
+    color: #607d8b;
+    font-size: 0.88rem;
+    transition: all 0.25s ease;
+}
+
+.tab-button:hover {
+    background: #e2e8f0;
+    color: #37474f;
 }
 
 .tab-button.active {
     background: white;
-    color: #2980b9;
+    color: #1e88e5;
+    font-weight: 500;
     border-bottom: 2px solid white;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.04);
 }
 
 .tab-content {
     display: none;
-    margin-top: 20px;
+    margin-top: 25px;
+    animation: fadeIn 0.4s ease;
 }
 
 .tab-content.active {
     display: block;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .section-title {
-    font-size: 1em;
-    font-weight: bold;
-    color: #2c3e50;
-    margin: 25px 0 12px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 35px 0 16px;
+    border-bottom: 2px solid #cfd8dc;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
 }
 
 /* ===== TABLES ===== */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
 table, th, td {
-    border: 1px solid #e0e0e0;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
+    border: 1px solid #e9ecef;
 }
 
 th {
-    background-color: #f8f9fa;
-    color: #333;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 0.95rem;
+    background-color: #f4f6f7;
+    color: #47525e;
+    font-weight: 500;
+}
+
+td {
+    padding: 14px 16px;
+    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+strong {
+    font-weight: 550;
+}
+
+tr:hover {
+    background-color: #fdfdfd;
 }
 
 /* ===== LISTS ===== */
 .bullet-list {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .bullet-list li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: #444;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    line-height: 1.65;
+    color: #455a64;
+    font-size: 0.96rem;
+}
+
+.bullet-list li::before {
+    content: "•";
+    color: #1e88e5;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
 }
 
 /* ===== GRID FOR GROUPS/PROJECTS ===== */
@@ -134,51 +208,63 @@ th {
 .module-item {
     background-color: white;
     border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border: 1px solid #eef2f3;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border: 1px solid #e6ecf0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #4c566a;
 }
 
 .module-item strong {
-    color: #2980b9;
+    color: #1e88e5;
     display: block;
-    margin-bottom: 8px;
-    font-size: 1.05em;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    font-weight: 550;
 }
 
 /* ===== BACK TO TOP ===== */
 .back-to-top {
-    margin-top: 25px;
+    margin-top: 30px;
     text-align: right;
 }
 
 .back-to-top a {
     text-decoration: none;
-    color: #2980b9;
-    font-weight: bold;
+    color: #1e88e5;
+    font-weight: 550;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.back-to-top a:hover {
+    color: #1565c0;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 50px;
     text-align: center;
-    color: #7f8c8d;
-    font-size: 0.9em;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
+    color: #90a4ae;
+    font-size: 0.88rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 25px;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
     }
     .avatar-container {
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
-    .avatar-container img {
-        width: 100%;
-        height: auto;
+    .info {
+        text-align: justify;
     }
     .module-grid {
         grid-template-columns: 1fr;
@@ -187,7 +273,9 @@ footer {
         flex-wrap: wrap;
     }
     .tab-button {
-        margin-bottom: 5px;
+        flex: 1 1 auto;
+        padding: 10px 15px;
+        font-size: 0.85rem;
     }
 }
 </style>
@@ -224,13 +312,15 @@ window.onload = function () {
     <div class="intro">
         <h1>Truc Pham</h1>
         <p class="info">
-            An English Lecturer with an academic background in English Linguistics, Theory and Methodology of English Language Teaching, along with interdisciplinary knowledge in Business Administration. Experienced in teaching at language centers and higher education institutions, with the capability to handle modules in Language Skills, Linguistics, Business English, English for Specific Purposes (ESP), and Translation.
+            An English Lecturer with an academic background in English Linguistics, Theory and Methodology of English Language Teaching, along with interdisciplinary knowledge in Business Administration. 
+            Experienced in teaching at language centers and higher education institutions, with the capability to handle modules in Language Skills, Linguistics, Business English,
+            English for Specific Purposes (ESP) and Translation.
         </p>
     </div>
 </header>
 
-<div style="text-align:center;font-style:italic;margin-bottom:20px;color:black;">
-   Free your mind, the best things will follow
+<div class="quote-container">
+    "Free your mind, the best things will follow"
 </div>
 
 <div class="tabs">
@@ -240,15 +330,16 @@ window.onload = function () {
     <button class="tab-button" onclick="openTab(event,'activities')">🏆 Academic Activities</button>
 </div>
 
+<!-- TAB 1: EDUCATION & EXPERIENCE -->
 <div id="education_work" class="tab-content">
     <div class="section-title">🎓 Education Background</div>
     <table>
         <thead>
             <tr>
-                <th>Degree/Program</th>
-                <th>Institution</th>
-                <th>Duration</th>
-                <th>Notes</th>
+                <th style="width: 30%;">Degree/Program</th>
+                <th style="width: 30%;">Institution</th>
+                <th style="width: 15%;">Duration</th>
+                <th style="width: 25%;">Notes</th>
             </tr>
         </thead>
         <tbody>
@@ -256,7 +347,7 @@ window.onload = function () {
                 <td><strong>Master of Arts in Theory and Methodology of English Language Teaching</strong></td>
                 <td>Edith Cowan University, Australia</td>
                 <td>03/2022 - 10/2024</td>
-                <td>GPA: 3.528/4; Thesis: Applying Role-Play Techniques to Enhance English Spoken Fluency for Vietnamese Children</td>
+                <td>GPA: 3.528/4<br><span style="color: #607d8b; font-size: 0.88rem;">Thesis: Applying Role-Play Techniques to Enhance English Spoken Fluency for Vietnamese Children</span></td>
             </tr>
             <tr>
                 <td><strong>MBA Student</strong></td>
@@ -268,7 +359,7 @@ window.onload = function () {
                 <td><strong>Bachelor of Arts in English Linguistics</strong></td>
                 <td>Thu Dau Mot University</td>
                 <td>08/2018 - 03/2022</td>
-                <td>GPA: 8.06/10; Classification: Excellent</td>
+                <td>GPA: 8.06/10<br><span style="color: #2e7d32; font-weight: 500; font-size: 0.88rem;">Classification: Excellent</span></td>
             </tr>
             <tr>
                 <td><strong>Bachelor of Arts in Chinese Linguistics</strong></td>
@@ -283,10 +374,10 @@ window.onload = function () {
     <table>
         <thead>
             <tr>
-                <th>Duration</th>
-                <th>Position</th>
-                <th>Institution</th>
-                <th>Key Responsibilities</th>
+                <th style="width: 15%;">Duration</th>
+                <th style="width: 25%;">Position</th>
+                <th style="width: 30%;">Institution</th>
+                <th style="width: 30%;">Key Responsibilities</th>
             </tr>
         </thead>
         <tbody>
@@ -326,6 +417,7 @@ window.onload = function () {
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- TAB 2: TEACHING MODULES -->
 <div id="teaching_modules" class="tab-content">
     <div class="section-title">🧭 Teaching Module Groups</div>
     <div class="module-grid">
@@ -338,61 +430,60 @@ window.onload = function () {
             Introduction to Linguistics, foundational concepts in English language, language analysis skills, English - Vietnamese translation, and modules supporting language research capacity.
         </div>
         <div class="module-item">
-            <strong>💼 Business English and Professional Communication</strong>
+            <strong>💼 Business English & Professional Communication</strong>
             Business English, English for Business, email writing, presentation skills, intercultural communication, English in professional environments, and ESP modules such as English in Logistics.
         </div>
         <div class="module-item">
-            <strong>🛠️ Complementary Competencies in Higher Education</strong>
+            <strong>🛠️ Complementary Competencies</strong>
             Lesson design, syllabus and exam development, student assessment, internship report supervision, utilizing LMS, digital tools, and AI to support English teaching and learning.
         </div>
     </div>
 
-    <div class="section-title">📜 Certificates & Skills</div>
+    <div class="section-title">📜 Certificates & Core Skills</div>
     <ul class="bullet-list">
-        <li><strong>Certificate in Pedagogy for University and College Lecturers</strong> – Hanoi Pedagogical University 2, 2023 (Classification: Excellent).</li>
-        <li><strong>Postgraduate Certificate in Theory and Methodology of English Language Teaching</strong> – Ho Chi Minh City Open University, 2023 (Classification: Very Good).</li>
-        <li><strong>Languages:</strong> Native Vietnamese; English for teaching and research; Intermediate Chinese.</li>
-        <li><strong>Core Skills:</strong> Lesson design, instructional material development, student assessment, academic writing, conference presentations, LMS, digital tools, and AI in teaching.</li>
+        <li><strong>Certificate in Pedagogy for University and College Lecturers</strong> – Hanoi Pedagogical University 2, 2023 <span style="color: #2e7d32; font-weight: 500;">(Excellent)</span>.</li>
+        <li><strong>Postgraduate Certificate in Theory and Methodology of English Language Teaching</strong> – Ho Chi Minh City Open University, 2023 <span style="color: #2e7d32; font-weight: 500;">(Very Good)</span>.</li>
+        <li><strong>Languages:</strong> Native Vietnamese; Professional English for teaching & research; Intermediate Chinese.</li>
+        <li><strong>Core Skills:</strong> Lesson design, instructional material development, student assessment, academic writing, conference presentations, LMS, digital tools, and AI tools integration in teaching.</li>
     </ul>
 
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- TAB 3: PUBLICATIONS -->
 <div id="publications" class="tab-content">
     <div class="section-title">🔍 Research Orientations</div>
     <ul class="bullet-list">
         <li>English teaching methodologies and speaking fluency development.</li>
         <li>Digital transformation in English education; integrating CRM, LMS, and technology into language center management.</li>
         <li>Generative AI and its impact on attitudes, experiences, and effectiveness in English learning.</li>
-        <li>Digital pedagogical competence and professional development for university lecturers.</li>
-        <li>Difficulties of English-majored students in English-Vietnamese translation and interpretation.</li>
     </ul>
 
     <div class="section-title">📄 Publications & Conference Proceedings</div>
     <ul class="bullet-list">
-        <li>
-            <strong>Integrating CRM and LMS for Recruitment and Management in English Centers: A Practical Digital Transformation Model</strong> (2025). <br>
-            <em>2025 Scientific Conference: “Application of Digital Technology in Scientific Development and Innovation” - Thu Dau Mot University</em>, ISBN: 978-604-72-8844-1.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">Integrating CRM and LMS for Recruitment and Management in English Centers: A Practical Digital Transformation Model</strong> (2025). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">2025 Scientific Conference: “Application of Digital Technology in Scientific Development and Innovation” - Thu Dau Mot University. ISBN: 978-604-72-8844-1.</span>
         </li>
-        <li>
-            <strong>Technology Acceptance of Green Digital Transformation in English Language Teaching</strong> (2025). <br>
-            <em>2025 Institutional Scientific Conference - Binh Duong University</em>, ISBN: 978-632-03-1255-9.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">Technology Acceptance of Green Digital Transformation in English Language Teaching</strong> (2025). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">2025 Institutional Scientific Conference - Binh Duong University. ISBN: 978-632-03-1255-9.</span>
         </li>
-        <li>
-            <strong>The Impact of Generative AI on English Learning Attitudes and Effectiveness</strong> (2025). <br>
-            <em>Conference on “From Digital Transformation to Open Digital Ecosystem: A Sustainable Strategic Direction for Universities and Colleges in the Current Era”</em>, ISBN: 978-604-42-5201-8.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">The Impact of Generative AI on English Learning Attitudes and Effectiveness</strong> (2025). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">Conference on “From Digital Transformation to Open Digital Ecosystem: A Sustainable Strategic Direction for Universities and Colleges in the Current Era”. ISBN: 978-604-42-5201-8.</span>
         </li>
-        <li>
-            <strong>Developing Digital Pedagogical Competence of University Lecturers Through an In-house Training Model Combined with Online Learning Communities</strong> (2025). <br>
-            <em>Conference on “Enhancing Teaching and Scientific Research Capabilities of University and College Lecturers in the Digital Age”</em>, ISBN: 978-632-615-205-0.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">Developing Digital Pedagogical Competence of University Lecturers Through an In-house Training Model Combined with Online Learning Communities</strong> (2025). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">Conference on “Enhancing Teaching and Scientific Research Capabilities of University and College Lecturers in the Digital Age”. ISBN: 978-632-615-205-0.</span>
         </li>
-        <li>
-            <strong>TDMU Third-Year English-Majored Students’ Difficulties in Interpreting English-Vietnamese Spoken Texts and Solutions</strong> (2024). <br>
-            <em>The 2nd Vietnam Global Young Scientists Conference</em>, ISBN: 978-604-43-1089.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">TDMU Third-Year English-Majored Students’ Difficulties in Interpreting English-Vietnamese Spoken Texts and Solutions</strong> (2024). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">The 2nd Vietnam Global Young Scientists Conference. ISBN: 978-604-43-1089.</span>
         </li>
-        <li>
-            <strong>Lacquer in Binh Duong in International Integration Process 2015-2019 through Lacquer Practice in Tuong Binh Hiep Village</strong> (2022). <br>
-            <em>Global Young Scientists Conference</em>, ISBN: 978-604-341-907-8.
+        <li style="margin-bottom: 18px;">
+            <strong style="color: #2c3e50;">Lacquer in Binh Duong in International Integration Process 2015-2019 through Lacquer Practice in Tuong Binh Hiep Village</strong> (2022). <br>
+            <span style="color: #546e7a; font-size: 0.9rem;">Global Young Scientists Conference. ISBN: 978-604-341-907-8.</span>
         </li>
     </ul>
 
@@ -400,10 +491,10 @@ window.onload = function () {
     <table>
         <thead>
             <tr>
-                <th>Project Title</th>
-                <th>Duration</th>
-                <th>Project Level</th>
-                <th>Role</th>
+                <th style="width: 55%;">Project Title</th>
+                <th style="width: 15%;">Duration</th>
+                <th style="width: 15%;">Project Level</th>
+                <th style="width: 15%;">Role</th>
             </tr>
         </thead>
         <tbody>
@@ -419,22 +510,23 @@ window.onload = function () {
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
+<!-- TAB 4: ACADEMIC ACTIVITIES -->
 <div id="activities" class="tab-content">
     <div class="section-title">🎙️ Academic Conferences (Role: Moderator)</div>
     <ul class="bullet-list">
-        <li><strong>Academic Moderator (Session 4: Entrepreneurship and General Management)</strong> - PACSB 2025 International Conference (Theme: “Sustainability Meets Innovation: The Emerging Trend in Business Education”).</li>
+        <li><strong>Academic Moderator (Session 4: Entrepreneurship and General Management)</strong> - PACSB 2025 International Conference <br><span style="color: #546e7a; font-size: 0.9rem;">Theme: “Sustainability Meets Innovation: The Emerging Trend in Business Education”.</span></li>
         <li><strong>Academic Moderator</strong> - The 2nd International Conference on Emerging Technologies for Energy and Environment (ICETE2-2026).</li>
     </ul>
 
     <div class="section-title">💡 Startup & Innovation Awards</div>
     <ul class="bullet-list">
-        <li>
+        <li style="margin-bottom: 15px;">
             <strong>F-PRINT Project (2020)</strong> - Co-founder. <br>
-            An online printing support application project for students. Excellently won <strong>Second Prize</strong> in the Grand Finale of the <em>Binh Duong Innovation 2020</em> startup competition.
+            An online printing support application project for students. Excellently won <span style="color: #e65100; font-weight: 500;">Second Prize</span> in the Grand Finale of the <em>Binh Duong Innovation 2020</em> startup competition.
         </li>
-        <li>
+        <li style="margin-bottom: 15px;">
             <strong>Financial Education Assistant Project for Children (2021)</strong> - Core team member. <br>
-            Surpassed numerous ideas to win <strong>Second Prize</strong> at the <em>TEC2021</em> innovative startup competition (co-organized by the People's Committee of Binh Duong Province).
+            Surpassed numerous ideas to win <span style="color: #e65100; font-weight: 500;">Second Prize</span> at the <em>TEC2021</em> innovative startup competition (co-organized by the People's Committee of Binh Duong Province).
         </li>
     </ul>
 
@@ -442,8 +534,8 @@ window.onload = function () {
 </div>
 
 <footer>
-    © 2026 Phạm Thị Xuân Trúc | Academic Portfolio
-    <p style="font-size: 0.8em; color: #aaa; margin-top: 5px;">Email: xuantrucpham0907@gmail.com | Phone: +84 83 514 3658</p>
+    <div style="font-weight: 500; color: #546e7a; margin-bottom: 4px;">© 2026 Phạm Thị Xuân Trúc | Academic Portfolio</div>
+    <div style="color: #78909c;">Email: xuantrucpham0907@gmail.com</div>
 </footer>
 
 </body>
