@@ -46,24 +46,22 @@ header {
 }
 
 h1 { 
-    font-size: 1.8rem;
-    margin: 0 0 10px 0; 
-    padding: 8px 16px;
+    font-size: 2rem;
+    margin: 0 0 6px 0; 
+    padding-bottom: 6px;
     color: #233342; 
     font-weight: 500;
     letter-spacing: -0.5px;
-    border: 1px solid #cfd8dc;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid #cfd8dc;
     display: inline-block;
 }
 
 .info {
     text-align: justify;
-    line-height: 1.65;
+    line-height: 1.7;
     color: #546e7a;
     font-size: 0.98rem;
-    margin: 0;
+    margin: 4px 0 0 0;
 }
 
 .quote-container {
@@ -125,7 +123,7 @@ h1 {
 
 .section-title {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #34495e;
     margin: 35px 0 16px;
     border-bottom: 2px solid #cfd8dc;
@@ -149,24 +147,16 @@ table, th, td {
     border: 1px solid #e9ecef;
 }
 
-th {
+th, td {
     padding: 14px 16px;
-    text-align: center;
+    text-align: left;
     font-size: 0.95rem;
+}
+
+th {
     background-color: #f4f6f7;
     color: #47525e;
-    font-weight: 500;
-}
-
-td {
-    padding: 14px 16px;
-    text-align: justify;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-strong {
-    font-weight: 550;
+    font-weight: 600;
 }
 
 tr:hover {
@@ -221,7 +211,7 @@ tr:hover {
     display: block;
     margin-bottom: 10px;
     font-size: 1.05rem;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 /* ===== BACK TO TOP ===== */
@@ -233,7 +223,7 @@ tr:hover {
 .back-to-top a {
     text-decoration: none;
     color: #1e88e5;
-    font-weight: 550;
+    font-weight: 600;
     font-size: 0.9rem;
     transition: color 0.2s ease;
 }
@@ -264,7 +254,7 @@ footer {
         margin-bottom: 20px;
     }
     .info {
-        text-align: justify;
+        text-align: center;
     }
     .module-grid {
         grid-template-columns: 1fr;
@@ -330,7 +320,6 @@ window.onload = function () {
     <button class="tab-button" onclick="openTab(event,'activities')">🏆 Academic Activities</button>
 </div>
 
-<!-- TAB 1: EDUCATION & EXPERIENCE -->
 <div id="education_work" class="tab-content">
     <div class="section-title">🎓 Education Background</div>
     <table>
@@ -359,7 +348,7 @@ window.onload = function () {
                 <td><strong>Bachelor of Arts in English Linguistics</strong></td>
                 <td>Thu Dau Mot University</td>
                 <td>08/2018 - 03/2022</td>
-                <td>GPA: 8.06/10<br><span style="color: #2e7d32; font-weight: 500; font-size: 0.88rem;">Classification: Excellent</span></td>
+                <td>GPA: 8.06/10<br><span style="color: #2e7d32; font-weight: 600; font-size: 0.88rem;">Classification: Excellent</span></td>
             </tr>
             <tr>
                 <td><strong>Bachelor of Arts in Chinese Linguistics</strong></td>
@@ -417,7 +406,6 @@ window.onload = function () {
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- TAB 2: TEACHING MODULES -->
 <div id="teaching_modules" class="tab-content">
     <div class="section-title">🧭 Teaching Module Groups</div>
     <div class="module-grid">
@@ -441,8 +429,8 @@ window.onload = function () {
 
     <div class="section-title">📜 Certificates & Core Skills</div>
     <ul class="bullet-list">
-        <li><strong>Certificate in Pedagogy for University and College Lecturers</strong> – Hanoi Pedagogical University 2, 2023 <span style="color: #2e7d32; font-weight: 500;">(Excellent)</span>.</li>
-        <li><strong>Postgraduate Certificate in Theory and Methodology of English Language Teaching</strong> – Ho Chi Minh City Open University, 2023 <span style="color: #2e7d32; font-weight: 500;">(Very Good)</span>.</li>
+        <li><strong>Certificate in Pedagogy for University and College Lecturers</strong> – Hanoi Pedagogical University 2, 2023 <span style="color: #2e7d32; font-weight: 600;">(Excellent)</span>.</li>
+        <li><strong>Postgraduate Certificate in Theory and Methodology of English Language Teaching</strong> – Ho Chi Minh City Open University, 2023 <span style="color: #2e7d32; font-weight: 600;">(Very Good)</span>.</li>
         <li><strong>Languages:</strong> Native Vietnamese; Professional English for teaching & research; Intermediate Chinese.</li>
         <li><strong>Core Skills:</strong> Lesson design, instructional material development, student assessment, academic writing, conference presentations, LMS, digital tools, and AI tools integration in teaching.</li>
     </ul>
@@ -450,7 +438,6 @@ window.onload = function () {
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- TAB 3: PUBLICATIONS -->
 <div id="publications" class="tab-content">
     <div class="section-title">🔍 Research Orientations</div>
     <ul class="bullet-list">
@@ -510,7 +497,6 @@ window.onload = function () {
     <div class="back-to-top"><a href="#top">↑ Back to Top</a></div>
 </div>
 
-<!-- TAB 4: ACADEMIC ACTIVITIES -->
 <div id="activities" class="tab-content">
     <div class="section-title">🎙️ Academic Conferences (Role: Moderator)</div>
     <ul class="bullet-list">
@@ -522,11 +508,11 @@ window.onload = function () {
     <ul class="bullet-list">
         <li style="margin-bottom: 15px;">
             <strong>F-PRINT Project (2020)</strong> - Co-founder. <br>
-            An online printing support application project for students. Excellently won <span style="color: #e65100; font-weight: 500;">Second Prize</span> in the Grand Finale of the <em>Binh Duong Innovation 2020</em> startup competition.
+            An online printing support application project for students. Excellently won <span style="color: #e65100; font-weight: 600;">Second Prize</span> in the Grand Finale of the <em>Binh Duong Innovation 2020</em> startup competition.
         </li>
         <li style="margin-bottom: 15px;">
             <strong>Financial Education Assistant Project for Children (2021)</strong> - Core team member. <br>
-            Surpassed numerous ideas to win <span style="color: #e65100; font-weight: 500;">Second Prize</span> at the <em>TEC2021</em> innovative startup competition (co-organized by the People's Committee of Binh Duong Province).
+            Surpassed numerous ideas to win <span style="color: #e65100; font-weight: 600;">Second Prize</span> at the <em>TEC2021</em> innovative startup competition (co-organized by the People's Committee of Binh Duong Province).
         </li>
     </ul>
 
@@ -534,7 +520,7 @@ window.onload = function () {
 </div>
 
 <footer>
-    <div style="font-weight: 500; color: #546e7a; margin-bottom: 4px;">© 2026 Phạm Thị Xuân Trúc | Academic Portfolio</div>
+    <div style="font-weight: 600; color: #546e7a; margin-bottom: 4px;">© 2026 Phạm Thị Xuân Trúc | Academic Portfolio</div>
     <div style="color: #78909c;">Email: xuantrucpham0907@gmail.com</div>
 </footer>
 
